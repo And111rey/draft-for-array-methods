@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset = "UTF-8"/>
+<title>about obj</title>
+</head>
+
+<body>
+
+<script>
+
+// .........................................................it is object "user"........................................./*
+var user = { 
+	name: "VAsya",
+	age: 15,
+	skinColor: "wite" 
+}
+console.log(user);
+
+//....................................................... greate array from objeck.....................
+var arr = []; 
+ for(var key in user) {
+	arr[key] = user[key]; 
+ }
+console.log (arr);
+
+
+//.........................................................Object.keys(obj).....Были вытянуты ключи из обьекта и переведены в массив...............................................................
+var someObj = {
+	chief: "Karnass",
+	deputyChief: "Malivan",
+	operationalOfficer: ["Gorob", "Shach", "Maderos", "Slihta","Venger"]
+	}
+	 var str = Object.keys(someObj).join();
+	 var arr = str.split(",");
+	 alert(arr);
+
+	function objKeysInArray (a) { //.....................................function fot task
+		return Object.keys(a).join().split(",")[2]
+	}
+	objKeysInArray(someObj);
+
+</script>
+</body>
+</html>
